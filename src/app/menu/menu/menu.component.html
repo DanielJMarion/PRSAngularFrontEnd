@@ -1,0 +1,18 @@
+
+<div>
+
+    <h1>Purchase Request System</h1>
+
+    <nav>
+
+      <ul class="horizontalmenu">
+            <li *ngFor='let mi of menuitems'>
+                <span *ngIf="mi.visible" >
+                <a routerLink="{{mi.route}}" >{{mi.display}}</a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+  </div>
+

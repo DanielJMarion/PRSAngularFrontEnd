@@ -1,0 +1,27 @@
+<app-menus></app-menus>
+<div>
+<form [formGroup]="vendorForm"
+        class="input-group vertical"
+        (submit)="onSubmit()">
+
+    Code: <input formControlName="code" name="code" id="code" type="text">
+    <br>
+    Name: <input formControlName="name" name="name" id="name" type="text">
+    <br>
+    Address: <input formControlName="address" name="address" id="address" type="text">
+    <br>
+    City: <input formControlName="city" name="city" id="city" type="text">
+    <br>
+    State: <input formControlName="state" name="state" id="state" type="text">
+    <br>
+    Zip: <input formControlName="zip" name="zip" id="zip" type="text">
+    <br>
+    Phone: <input formControlName="phone" name="phone" id="phone" type="text">
+    <br>
+    Email: <input formControlName="email" name="email" id="email" type="email">
+    <br>
+
+    <button>Submit</button><button routerLink="/vendor-list" >Cancel</button>
+
+</form>
+</div>

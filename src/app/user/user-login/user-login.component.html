@@ -1,0 +1,30 @@
+<app-menus></app-menus>
+
+<h2>User Login</h2>
+<div>
+<span style="color:red" >{{errorMessage}}</span>
+
+<form [formGroup]="userLoginForm" >
+
+<table>
+    <tr>
+        <td>
+            User Name:
+        </td>
+        <td>
+            <input type="text" name="username" formControlName="username" value="admin" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password:
+        </td>
+        <td>
+            <input type="password" name="password" formControlName="password" value="abc123" />
+        </td>
+    </tr></table>
+<button  (click)="login()"  >Login</button>
+</form>
+
+<em>Do not leave defaults in your final version!</em>
+</div>

@@ -1,0 +1,37 @@
+<app-menus></app-menus>
+<div>
+
+
+
+<table>
+  <tr>
+    <th>vendors ID</th>
+    <th>Name</th>
+    <th>Code</th>
+    <th>address</th>
+    <th>city</th>
+    <th>state</th>
+    <th>zip</th>
+    <th>phone</th>
+    <th>email</th>
+</tr>
+
+<!--ng for loop to display all vendors in the vendors table-->
+  <tr *ngFor="let vendors of vendors">
+          <td>{{vendors.id}}</td>
+          <td>{{vendors.code}}</td>
+          <td>{{vendors.name}}</td>
+          <td>{{vendors.address}}</td>
+          <td>{{vendors.city}}</td>
+          <td>{{vendors.state}}</td>
+          <td>{{vendors.zip}}</td>
+          <td>{{vendors.phone}}</td>
+          <td>{{vendors.email}}</td>
+          <td><a routerLink='/vendors-detail/{{vendors.id}}'>Display</a></td>
+          <td><a routerLink='/vendors-edit/{{vendors.id}}'>Edit</a></td>
+      </tr>
+  </table>
+  <br>
+  <button routerLink='/vendors-create'>Create A New Vendor</button>
+
+</div>

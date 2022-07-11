@@ -1,0 +1,35 @@
+
+<!--routing for the menu-->
+<app-menus></app-menus>
+
+<!-- user table -->
+
+<table>
+  <tr>
+    <th>User ID</th>
+    <th>User Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Reviewer</th>
+    <th>Admin</th>
+</tr>
+
+<!--ng for loop to display all users in the user table-->
+  <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.firstname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.isReviewer}}</td>
+          <td>{{user.isAdmin}}</td>
+          <td><a routerLink='/user-detail/{{user.id}}'>Display</a></td>
+          <td><a routerLink='/user-edit/{{user.id}}'>Edit</a></td>
+      </tr>
+  </table>
+  <br>
+
+  <button routerLink='/user-create'>Create A New User</button>

@@ -1,0 +1,25 @@
+<app-menus></app-menus>
+
+<form [formGroup]="productForm"
+        class="input-group vertical"
+        (submit)="onSubmit()">
+
+
+    PartNbr: <input formControlName="partNbr" name="partNbr" id="partNbr" type="text">
+    <br>
+    Name: <input formControlName="name" name="name" id="name" type="text">
+    <br>
+    Price: <input formControlName="price" name="price" id="price" type="number">
+
+    <br> Unit: <input formControlName="unit" name="unit" id="unit" type="text">
+
+    <br> PhotoPath: <input formControlName="photoPath" name="photoPath" id="photoPath" type="text">
+
+    <br> VendorId: <input formControlName="vendorId" name="vendorId" id="vendorId" type="number">
+    <br>
+    <button>Submit</button><button routerLink="/product-list" >Cancel</button>
+
+</form>
+
+
+

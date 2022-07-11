@@ -1,0 +1,55 @@
+<app-menus></app-menus>
+
+<style>
+    td:first-child {font-weight: bold;}
+    td:nth-child(2) {background-color: white; width: 200px;}
+    .rightalign {text-align: right};
+</style>
+
+<h2>Details for {{requests.id}}</h2>
+<hr>
+<span style="color:red">
+    {{errorMessage}}
+</span>
+
+<span *ngIf="requests.id==0">Requests {{requestsid}} not found.</span>
+<div *ngIf="requests.id!=0">
+
+    <a routerLink='/requests-edit/{{requests.id}}'>Edit this product</a> <br>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>{{requests.id}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{requests.description}}</td>
+        </tr>
+        <tr>
+            <td>Justification</td>
+            <td>{{requests.justification}}</td>
+        </tr>
+        <tr>
+            <td>Rejection Reason</td>
+            <td>{{requests.rejectionReason}}</td>
+        </tr>
+        <tr>
+            <td>Delivery Mode</td>
+            <td>{{requests.deliveryMode}}</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>{{requests.status}}</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>{{requests.total}}</td>
+            <tr>
+              <td>User Id</td>
+              <td>{{requests.userId}}</td>
+        </tr>
+    </table>
+</div>
+
+

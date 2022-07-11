@@ -1,0 +1,41 @@
+
+<app-menus></app-menus>
+<style>
+    input { margin-left: 10px;}
+</style>
+<!-- this really needs a table, some divs or CSS! -->
+
+
+<span style="color:red">{{errorMessage}}</span>
+
+<form [formGroup]="userForm"
+        (submit)="onSubmit()">
+
+
+
+    Username: <br><input formControlName="username" name="username" id="username" type="text">
+    <br>
+
+    Password: <br><input formControlName="password" name="password" id="password" type="text">
+    <span style="color:red" *ngIf="userForm.controls['name'].errors">Please enter a name up to 30 characters.</span>
+    <br>
+
+    First Name: <br><input formControlName="firstname" name="firstname" id="firstname" type="number">
+    <br>
+
+    Last Name: <br><input formControlName="lastname" name="lastname" id="lastname" type="text">
+    <br>
+
+    Phone Number: <br><input formControlName="phone" name="phone" id="phone" type="number">
+    <br>
+
+    Email: <br><input formControlName="email" name="email" id="email" type="text">
+    <br>
+
+    <button>Submit</button>
+    <button routerLink="/user-list" >Cancel</button>
+
+
+</form>
+
+

@@ -1,0 +1,31 @@
+<app-menus></app-menus>
+
+<!-- products table -->
+
+<table>
+  <tr>
+    <th>products ID</th>
+    <th>PartNbr</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Unit</th>
+    <th>Picture</th>
+    <th>VendorID</th>
+
+</tr>
+
+<!--ng for loop to display all products in the products table-->
+  <tr *ngFor="let products of products">
+          <td>{{products.id}}</td>
+          <td>{{products.partNbr}}</td>
+          <td>{{products.name}}</td>
+          <td>{{products.price}}</td>
+          <td>{{products.unit}}</td>
+          <td>{{products.photoPath}}</td>
+          <td>{{products.vendorId}}</td>
+          <td><a routerLink='/product-detail/{{products.id}}'>Display</a></td>
+          <td><a routerLink='/product-edit/{{products.id}}'>Edit</a></td>
+      </tr>
+  </table>
+  <br>
+  <button routerLink='/products-create'>Create A New Product</button>

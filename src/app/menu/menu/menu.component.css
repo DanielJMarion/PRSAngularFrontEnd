@@ -1,0 +1,27 @@
+ul {
+  list-style-type: none;
+  margin: 4px;
+  padding: 0;}
+
+
+ul li {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+ul li a {
+  padding:3px;
+  margin-right: 2px;
+  background-color: rgb(194, 194, 194);
+  border:2px rgb(39, 13, 13) solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+
+}
+div
+{font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(158, 158, 158);
+  border-color: moccasin;
+  text-align:center}
+

@@ -1,0 +1,30 @@
+<app-menus></app-menus>
+
+<form [formGroup]="requestForm"
+        class="input-group vertical"
+        (submit)="onSubmit()">
+    Description: <input formControlName="description" name="description" id="description" type="text">
+    <br>
+
+    Justification: <input formControlName="justification" name="justification"
+    id="justification" type="text">
+    <br>
+
+    DeliveryMode: <input formControlName="deliveryMode" name="deliveryMode" id="deliveryMode"
+    type="text">
+
+    <br>
+
+
+
+
+
+
+    <button>Submit</button><button routerLink="/request-list" >Cancel</button>
+
+</form>
+
+
+
+
+

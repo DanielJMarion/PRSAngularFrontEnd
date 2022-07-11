@@ -1,0 +1,36 @@
+<app-menus></app-menus>
+
+
+
+
+
+<table>
+  <tr>
+    <th>Requests ID</th>
+    <th>Description</th>
+    <th>Justification</th>
+    <th>RejectionReason</th>
+    <th>DeliveryMode</th>
+    <th>Status</th>
+    <th>Total</th>
+    <th>UserId</th>
+</tr>
+
+<!--ng for loop to display all requests in the requests table-->
+  <tr *ngFor="let request of requests">
+          <td>{{request.id}}</td>
+          <td>{{request.description}}</td>
+          <td>{{request.justification}}</td>
+          <td>{{request.rejectionReason}}</td>
+          <td>{{request.deliveryMode}}</td>
+          <td>{{request.status}}</td>
+          <td>{{request.total}}</td>
+          <td>{{request.userId}}</td>
+          <td><a routerLink='/requests-detail/{{request.id}}'>Display</a></td>
+          <td><a routerLink='/requests-edit/{{request.id}}'>Edit</a></td>
+      </tr>
+  </table>
+
+  <br>
+
+  <button routerLink='/requests-create'>Submit A New Request</button>

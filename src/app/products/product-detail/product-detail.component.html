@@ -1,0 +1,50 @@
+<app-menus></app-menus>
+
+<style>
+    td:first-child {font-weight: bold;}
+    td:nth-child(2) {background-color: white; width: 200px;}
+    .rightalign {text-align: right};
+</style>
+
+<h2>Details for {{product.name}}</h2>
+<hr>
+<span style="color:red">
+    {{errorMessage}}
+</span>
+
+<span *ngIf="product.id==0">Product {{productid}} not found.</span>
+<div *ngIf="product.id!=0">
+
+    <a routerLink='/product-edit/{{product.id}}'>Edit this product</a> <br>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>{{product.id}}</td>
+        </tr>
+        <tr>
+            <td>Part Number</td>
+            <td>{{product.partNbr}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{product.name}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td class="rightalign">{{product.price | currency }}</td>
+        </tr>
+        <tr>
+            <td>Unit</td>
+            <td>{{product.unit}}</td>
+        </tr>
+        <tr>
+            <td>Photo Path</td>
+            <td>{{product.photoPath}}</td>
+        </tr>
+        <tr>
+            <td>Vendor ID</td>
+            <td>{{product.vendorId}}</td>
+        </tr>
+    </table>
+</div>

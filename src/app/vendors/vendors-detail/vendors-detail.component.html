@@ -1,0 +1,60 @@
+<app-menus></app-menus>
+
+<style>
+    td:first-child {font-weight: bold;}
+    td:nth-child(2) {background-color: white; width: 200px;}
+    .rightalign {text-align: right};
+</style>
+
+<h2>Details for {{vendors.id}}</h2>
+<hr>
+<span style="color:red">
+
+</span>
+
+<span *ngIf="vendors.id==0">vendors {{vendorsid}} not found.</span>
+<div *ngIf="vendorsid!=0">
+
+    <a routerLink='/vendors-edit/{{vendors.id}}'>Edit this product</a> <br>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>{{vendors.id}}</td>
+        </tr>
+        <tr>
+            <td>Code</td>
+            <td>{{vendors.code}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{vendors.name}}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{vendors.address}}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>{{vendors.city}}</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>{{vendors.state}}</td>
+        </tr>
+        <tr>
+            <td>Zip</td>
+            <td>{{vendors.zip}}</td>
+            <tr>
+              <td>Phone</td>
+              <td>{{vendors.phone}}</td>
+
+              <td>Email</td>
+              <td>{{vendors.email}}</td>
+        </tr>
+    </table>
+</div>
+
+
+
+

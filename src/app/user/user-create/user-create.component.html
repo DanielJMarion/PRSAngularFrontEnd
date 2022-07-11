@@ -1,0 +1,27 @@
+<div>
+<app-menus></app-menus>
+<form [formGroup]="userForm"
+        class="input-group vertical"
+        (submit)="onSubmit()">
+
+    Username: <input formControlName="username" name="username" id="username" type="text">
+    <br>
+    Password: <input formControlName="password" name="password" id="password" type="text">
+    <br>
+    First Name: <input formControlName="firstname" name="firstname" id="firstname" type="text">
+    <br>
+    Last Name: <input formControlName="lastname" name="lastname" id="lastname" type="text">
+    <br>
+    Phone: <input formControlName="phone" name="phone" id="phone" type="text">
+    <br>
+    Email: <input formControlName="email" name="email" id="email" type="email">
+    <br>
+    isReviewer: <input formControlName="isReviewer" name="isReviewer" id="isReviewer" type="checkbox">
+    <br>
+    isAdmin: <input formControlName="isAdmin" name="isAdmin" id="isAdmin" type="checkbox">
+    <br>
+
+    <button>Submit</button><button routerLink="/user-list" >Cancel</button>
+
+</form>
+</div>

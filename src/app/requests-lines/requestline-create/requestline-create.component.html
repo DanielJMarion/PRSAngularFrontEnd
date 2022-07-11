@@ -1,0 +1,18 @@
+<p>requestline-create works!</p>
+<app-menus></app-menus>
+
+<form [formGroup]="requestlineForm"
+        class="input-group vertical"
+        (submit)="onSubmit()">
+
+
+    RequestId: <input formControlName="RequestId" name="RequestId" id="RequestId" type="number">
+    <br>
+    ProductId: <input formControlName="ProductId" name="ProductId" id="ProductId" type="number">
+    <br>
+    Quantity: <input formControlName="Quantity" name="Quantity" id="Quantity" type="number">
+    <br>
+
+    <button>Submit</button>
+
+</form>

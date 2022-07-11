@@ -1,0 +1,35 @@
+<app-menus></app-menus>
+<style>
+    input { margin-left: 10px;}
+</style>
+<!-- this really needs a table, some divs or CSS! -->
+<h3>Edit Product "{{product.partNbr}}"</h3>
+
+<span style="color:red">{{errorMessage}}</span>
+
+<form [formGroup]="productForm"
+        (submit)="onSubmit()">
+
+    PartNbr: <br><input formControlName="partNbr" name="partNbr" id="partNbr" type="text">
+    <br>
+
+    Name: <br><input formControlName="name" name="name" id="name" type="text">
+    <span style="color:red" *ngIf="productForm.controls['name'].errors">Please enter a name up to 30 characters.</span>
+    <br>
+
+    Price: <br><input formControlName="price" name="price" id="price" type="number">
+    <br>
+
+    Unit: <br><input formControlName="unit" name="unit" id="unit" type="text">
+    <br>
+
+    Photo Path: <br><input formControlName="photoPath" name="photoPath" id="photoPath" type="text">
+    <br>
+
+    Vendor ID: <br><input formControlName="vendorId" name="vendorId" id="vendorId" type="number">
+    <br>
+
+    <button>Submit</button>
+    <button routerLink="/product-list" >Cancel</button>
+
+</form>

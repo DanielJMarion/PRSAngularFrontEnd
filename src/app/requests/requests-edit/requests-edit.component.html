@@ -1,0 +1,38 @@
+<app-menus></app-menus>
+
+<style>
+    input { margin-left: 10px;}
+</style>
+<!-- this really needs a table, some divs or CSS! -->
+<h3>Edit Request</h3>
+
+<span style="color:red">{{errorMessage}}</span>
+
+<form [formGroup]="requestForm"
+        (submit)="onSubmit()">
+
+    Description: <br><input formControlName="description" name="description" id="description" type="text">
+    <br>
+
+    Justification: <br><input formControlName="justification" name="justification" id="justification" type="text">
+    <span style="color:red" *ngIf="requestForm.controls['name'].errors">Please enter a name up to 30 characters.</span>
+    <br>
+
+    Rejection Reason: <br><input formControlName="rejectionReason" name="rejectionReason" id="rejectionReason" type="number">
+    <br>
+
+    Delivery Mode: <br><input formControlName="deliveryMode" name="deliveryMode" id="deliveryMode" type="text">
+    <br>
+
+    Status: <br><input formControlName="status" name="status" id="status" type="text">
+    <br>
+
+   User ID: <br><input formControlName="userId" name="userId" id="userId" type="number">
+    <br>
+
+    <button>Submit</button>
+    <button routerLink="/request-list" >Cancel</button>
+
+</form>
+
+
